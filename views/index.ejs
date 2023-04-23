@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+
+</head>
+<body>
+
+  <%- include('template/navBar.ejs'); -%>
+
+  <div class="storeHeader">
+    <div class="headerImage headerItem">
+      <img src="/images/logoMarket.png" width="80%" alt="">
+    </div>
+    <div class="headerContent headerItem">
+      <h1 class="indexHeaderTitle">Who we are... </h1>
+      <p class="indexHeadertext">Food market is a online-supermarket with the goal of bringing the best quality of foods and products to your table and give you a great experience</p>
+    </div>
+  </div>
+
+  <div class="categoryTextContainer">
+    <b>category</b>
+  </div>
+
+  <div class="categoryProductSearch">
+    <ul class="productCategoryList">
+      <li><a href="/api/products/category/fruits" class="productCategoryLink">fruits</a></li>
+      <li><a href="/api/products/category/veggies" class="productCategoryLink">veggies</a></li>
+      <li><a href="/api/products/category/milk" class="productCategoryLink">milk</a></li>
+      <li><a href="/api/products/category/butchery" class="productCategoryLink">Butchery</a></li>
+      <li><a href="/api/products/category/drinks" class="productCategoryLink">drinks</a></li>
+      <li><a href="/api/products/category/higiene" class="productCategoryLink">higiene</a></li>
+      <li><a href="/api/products/category/canned" class="productCategoryLink">canned</a></li>
+      <li><a href="/api/products/category/sauces" class="productCategoryLink">sauces</a></li>
+      <li><a href="/api/products/category/imported" class="productCategoryLink">imported</a></li>
+    </ul>
+  </div>
+
+
+
+
+    <div class="cartContainer">
+      <% products.forEach(product => { %>
+       <div class="cart">
+        <div class="cartImg">
+            <img src="<%=product.image%>" style="width: 60%; height: auto;">
+        </div>
+        <div class="cartContent">
+          <span class="productCategory"><%=product.category%></span>
+          <b class="productName"><%=product.name%></b>
+          <b class="productUnits"><%=product.units%> units avaliable</b>
+          <b class="productPrice"><%=product.price%> $</b>
+          <b><a href="/api/products/<%=product.id%>" class="detailBtn"  >Detail</a></b>
+          <button class="btnAddProduct" id="<%=product.id%>">Add</button>
+        </div>
+       </div>
+        <%}) %>
+
+    </div>
+
+    <%- include('template/footer.ejs'); -%>
+
+      <script src="/javascripts/main.js"type="module"></script>
+</body>
+</html>

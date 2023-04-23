@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+</head>
+<body>
+  <%- include('template/navBar.ejs'); -%>
+      
+      <div class="cartContainer">
+
+        <% if(cart.length == 0){ %>
+          <div class="noProductMessage">
+            <i class="fa-solid fa-cart-arrow-down fa-3x noProductIcon"></i>
+            <b>Theres no products... </b>
+            <p>Once you add, it`ll be reflected here... </p>
+          </div>
+          
+      <% } else{ %>  
+        <% cart.forEach(product => { %>
+          <div class="cart">
+           <div class="cartImg">
+               <img src="<%=product.image%>" style="width: 60%; height: auto;">
+           </div>
+           <div class="cartContent">
+             <span class="productCategory"><%=product.category%></span>
+             <b class="productName"><%=product.name%></b>
+             <!-- <b class="productUnits"><%=product.units%> units avaliable</b> -->
+             <b class="productPrice"><%=product.price%> $</b>
+             <i class="fa-solid fa-trash fa-2x deleteProductBtn" id="<%=product.id%>" class="productDeleteCartBtn"></i>
+           </div>
+          </div>
+           <%}) %>
+          </div>
+           <div class="btnOrderContainer">
+            <button class="btnFinishShopping"><a href="/api/order">FINISH</a></button>
+          </div>
+
+      <% } %>
+        </div>
+      <%- include('template/footer.ejs'); -%>
+          <script src="/javascripts/cart.js"type="module"></script>
+</body>
+</html>

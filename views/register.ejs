@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+</head>
+<body>
+  <%- include('template/authNavBar.ejs'); -%>
+  <div class="headerLoginContainer">
+    <img src="/images/logoMarket.png" class="logoMarketLogin" alt="">
+  </div>
+
+    <div class="formContainer">
+       <form action="/api/auth/register" method="POST" class="formArea">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input placeholder="Enter your name" type="text" name="name" class="form-control" id="emailInput" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Lastname</label>
+          <input placeholder="Enter your lastname" type="text" name="lastname" class="form-control" id="passwordInput">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input placeholder="Enter your email" type="email" name="email" class="form-control" id="passwordInput">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input placeholder="Enter your password" type="password" name="password" class="form-control" id="passwordInput">
+          </div>
+        <button type="submit" id="loginSubmit" class="btnSubmitLogin">register</button>
+      </form>
+    </div>
+
+    <script src="/javascripts/main.js"></script>
+</body>
+</html>

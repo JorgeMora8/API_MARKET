@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+
+</head>
+<body>
+    <%- include('template/navBar.ejs'); -%>
+    <div class="orderFinishedContainer">
+        <h1 class="orderFinishedHeader">Thanks for all</h1>
+        <p class="messageOrderSuccesfull">The order was done succesfully... </p>
+        <p class="emailWarning">A email was send to you to check the purchase info</p>
+        <img src="/images/logoMarket.png" class="logoOrderFinished" alt="">
+    </div>
+
+
+    <div class="reviewsInfoContainer">
+        <h3>Left your review here</h3>
+        <p>We love to know your opinion about our service</p>
+    
+        <form action="/api/reviews" method="POST">
+            <div class="mb-3">
+              <!-- <input type="text" name="opinion" class="form-control" id="exampleInputEmail1" placeholder="Opinion... " aria-describedby="emailHelp"> -->
+              <select name="opinion">
+                <option value="excellent">excellent</option>
+                <option value="great">great</option>
+                <option value="good">good</option>
+                <option value="need to improve">need to improve</option>
+                <option value="not good">not good</option>
+                <option value="awful">awful</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <input type="text" name="description" class="form-control" placeholder="Tell us why... " id="exampleInputPassword1">
+            </div>
+            <button type="submit"  class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <%- include('template/footer.ejs'); -%>
+</body>
+</html>

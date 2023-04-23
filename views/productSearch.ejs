@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+
+</head>
+<body>
+
+  <%- include('template/navBar.ejs'); -%>
+
+  <div class="categoryProductSearch">
+    <ul class="productCategoryList">
+      <li><a href="/api/products/category/fruits" class="productCategoryLink">fruits</a></li>
+      <li><a href="/api/products/category/veggies" class="productCategoryLink">veggies</a></li>
+      <li><a href="/api/products/category/milk" class="productCategoryLink">milk</a></li>
+      <li><a href="/api/products/category/butchery" class="productCategoryLink">Butchery</a></li>
+      <li><a href="/api/products/category/drinks" class="productCategoryLink">drinks</a></li>
+      <li><a href="/api/products/category/higiene" class="productCategoryLink">higiene</a></li>
+      <li><a href="/api/products/category/canned" class="productCategoryLink">canned</a></li>
+      <li><a href="/api/products/category/sauces" class="productCategoryLink">sauces</a></li>
+    </ul>
+  </div>
+
+  <div class="productSearchHeader">
+    <h1 class="headerCategoryTitle">Category: <%=productCategory%></h1>
+  </div>
+
+  <div class="cartContainer">
+    <% products.forEach(product => { %>
+     <div class="cart">
+      <div class="cartImg">
+          <img src="<%=product.image%>" style="width: 60%; height: auto;">
+      </div>
+      <div class="cartContent">
+        <span class="productCategory"><%=product.category%></span>
+        <b class="productName"><%=product.name%></b>
+        <b class="productUnits"><%=product.units%> units avaliable</b>
+        <b class="productPrice"><%=product.price%> $</b>
+        <b><a href="/api/products/<%=product.id%>" class="detailBtn">Detail</a></b>
+        <button class="btnAddProduct" id="<%=product.id%>">Add</button>
+      </div>
+     </div>
+      <%}) %>
+
+  </div>
+  <%- include('template/footer.ejs'); -%>
+
+      <script src="/javascripts/main.js"type="module"></script>
+</body>
+</html>

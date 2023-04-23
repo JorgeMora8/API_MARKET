@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('template/header.ejs') -%>
+</head>
+<body>
+  <%- include('template/navBar.ejs'); -%>
+    <div class="userInfoContainer">
+        <div class="userinfoData">
+            <i class="fa-solid fa-user fa-3x userIcon" style="color:#EDF1D6"></i>
+            <b class="userData">Name: <%=user.name%></b>
+            <b  class="userData">LastName: <%=user.lastname%></b>
+            <b  class="userData">Email: <%=user.email%></b>
+        </div>
+    </div>
+    <%- include('template/footer.ejs'); -%>
+</body>
+</html>

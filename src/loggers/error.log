@@ -1,0 +1,2 @@
+[2023-04-23T19:27:47.085] [ERROR] error - ERROR IN LOGIN PROCESS: Operation `users.findOne()` buffering timed out after 10000ms
+[2023-04-23T19:33:01.009] [ERROR] error - ERROR IN LOGIN PROCESS: Invalid credentials

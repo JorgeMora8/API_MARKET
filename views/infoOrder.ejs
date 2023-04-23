@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('template/header.ejs') -%>
+</head>
+<body>
+
+    <%- include('template/navBar.ejs'); -%>
+
+    <div class="infoOrderHeader">
+        <h1>Purchase info</h1>
+    </div>
+
+    <div class="infoUserOrderContainer">
+        <b class="infoOrderName infoOrderText"><i class="fa-solid fa-user userInfoOrderIcon"></i>   <%=user.name%> <%=user.lastname%></b>
+        <b class="infoOrderEmail infoOrderText"><i class="fa-solid fa-envelope userInfoOrderIcon"></i>   <%=user.email%></b>
+    </div>
+    
+    <div class="productOrderContainer">
+    <ol class="list-group">
+        <% products.forEach(product => { %>
+            <li class="list-group-item"><%=product.name %>. Price: <%=product.price%></li>
+        <%}) %>
+      </ol>
+    </div>
+    <div class="totalPriceContainer">
+        <b class="totalPriceOrderInfo">TOTAL = <%=total%>$</b>
+    </div>
+
+    <div class="formContainer">
+        <form action="/api/order" method="POST" class="formArea">
+            <div class="bankLogo"></div>
+         <div class="mb-3">
+           <label for="cardCode" class="form-label" style="color:gray">CARD </label>
+           <input type="text" name="cardCode" class="form-control" id="emailInput" placeholder="debit or credit cart code..." aria-describedby="emailHelp">
+         </div>
+         <div class="mb-3">
+           <label for="password" class="form-label" style="color:gray">CODE</label>
+           <input type="password" name="password" class="form-control" placeholder="Enter code" id="passwordInput">
+         </div>
+         <button type="submit" id="loginSubmit" class="btnSubmitLogin">finish</button>
+       </form>
+
+        <% if(message != null || undefined){ %>
+          <div class="infoError">
+            <b class="errorMessageFormOrderText"><i class="fa-solid fa-circle-exclamation fa-2x" style="color:brown"></i> ERROR: <%=message%></b>
+          </div>
+        <% } %>  
+
+     </div>
+    <%- include('template/footer.ejs'); -%>
+</body>
+</html>

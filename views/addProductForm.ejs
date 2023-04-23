@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+</head>
+<body>
+  <%- include('template/navBar.ejs'); -%>
+  <div class="productFormContainer">
+    <h2 class="productFormTitle">Add products</h2>
+    <p class="productFormText">Add the product with the correct data to be saved in the system</p>
+  </div>
+      <div class="formContainer">
+        <form class="productForm" method="POST" target="http://localhost:8080/api/products" >
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="productName" placeholder="Add product name" aria-describedby="product name">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" class="form-control"  name="price" placeholder="Add product price" id="productPrice">
+            </div>
+            <div class="mb-3">
+                <label for="units" class="form-label">units</label>
+                <input type="text" class="form-control" name="units" placeholder="Add product units" id="productUnits">
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">category</label>
+                <select name="category">
+                  <option value="fruits">fruits</option>
+                  <option value="veggies">veggies</option>
+                  <option value="milk">milk</option>
+                  <option value="drinks">drinks</option>
+                  <option value="sauces">sauces</option>
+                  <option value="butchery">butchery</option>
+                  <option value="higiene">higiene</option>
+                  <option value="imported">imported</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">image</label>
+                <input type="text" class="form-control" name="image" placeholder="Add product image" id="productImage">
+              </div>
+            <button type="submit" class="btn btn-primary btnAddProductForm">Submit</button>
+          </form>
+          </div>
+          <%- include('template/footer.ejs'); -%>
+</body>
+</html>

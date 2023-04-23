@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('template/header.ejs') -%>
+</head>
+<body>
+    <%- include('template/navBar.ejs'); -%>
+
+    <div class="reviewHeaderContainer">
+        <h1 class="reviewListTitle">reviews</h1>
+        <p class="reviewListText">Check the experience of other clients... </p>
+        <img class="logoOrderFinished" src="/images/logoMarket.png" alt="">
+    </div>
+
+    <div class="cartContainer">
+        <% reviewList.forEach(review => { %>
+            <div class="card">
+                <div class="card-body cartReview">
+                  <h5 class="reviewAuthor"><%=review.author%></h5>
+                  <h6 class="reviewOpinion"><%=review.opinion%></h6>
+                  <p class="reviewDescription"><%=review.description%></p>
+                </div>
+              </div>
+          <%}) %>
+  
+      </div>
+      <%- include('template/footer.ejs'); -%>
+</body>
+</html>

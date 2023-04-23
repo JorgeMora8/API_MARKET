@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/header.ejs') -%>
+</head>
+<body>
+  <%- include('template/navBar.ejs'); -%>
+  <div class="productDetailHeader">
+    <img src="/images/logoMarket.png" class="logoProductDetail" alt="">
+  </div>
+  <div class="categoryProductSearch">
+    <ul class="productCategoryList">
+      <li><a href="/api/products/category/fruits" class="productCategoryLink">fruits</a></li>
+      <li><a href="/api/products/category/veggies" class="productCategoryLink">veggies</a></li>
+      <li><a href="/api/products/category/milk" class="productCategoryLink">milk</a></li>
+      <li><a href="/api/products/category/butchery" class="productCategoryLink">Butchery</a></li>
+      <li><a href="/api/products/category/drinks" class="productCategoryLink">drinks</a></li>
+      <li><a href="/api/products/category/higiene" class="productCategoryLink">higiene</a></li>
+      <li><a href="/api/products/category/canned" class="productCategoryLink">canned</a></li>
+      <li><a href="/api/products/category/sauces" class="productCategoryLink">sauces</a></li>
+    </ul>
+  </div>
+    <div class="productDetailContainer">
+        <div class="detailArea">
+            <div class="productImageArea">
+                <img src="<%=product.image%>" class="productDetailImage" alt="">
+            </div>
+            <div class="productTextArea">
+                <span class="productCategoryDetail"><%=product.category%></span>
+                <b class="productNameDetail"><%=product.name%></b>
+                <b class="productPriceDetail"><%=product.price%>$</b>
+                <b class="productUnitsDetail"><%=product.units%> units avaliable</b>
+                <div>
+                <button class="btnAddProductDetail btnAddProduct" id="<%=product.id%>">Add</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('template/footer.ejs'); -%>
+    <script src="/javascripts/main.js"type="module"></script>
+</body>
+</html>
