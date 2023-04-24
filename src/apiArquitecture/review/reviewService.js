@@ -1,6 +1,6 @@
 import createReview from "../../utils/createReview.js"
-import ReviewRepository from "./ReviewRepository.js"
-import { ReviewDao } from "../../Persistence/DAO.js"
+import ReviewRepository from "./reviewRepository.js"
+import { ReviewDao } from "../../persistence/DAO.js"
 
 export default class ReviewService { 
     constructor(){ 
