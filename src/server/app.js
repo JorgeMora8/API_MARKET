@@ -4,10 +4,10 @@ import {orderRouter} from "../routers/order.js"
 import {userRouter} from "../routers/user.js"
 import {reviewRouter} from "../routers/review.js"
 import { AuthRouter } from "../routers/auth.js"
-import { AuthUser } from "../Auth/AuthMiddleware.js"
+import { AuthUser } from "../Auth/authMiddleware.js"
 import { CarRouter } from "../routers/cart.js"
 import { Homepage } from "../controllers/homepage.js"
-import {pageNotFoundGET } from "../controllers/PageNotFound.js"
+import {pageNotFoundGET } from "../controllers/pageNotFound.js"
 import cookieParser from "cookie-parser"
 
 

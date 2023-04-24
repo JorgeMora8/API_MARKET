@@ -1,5 +1,5 @@
 import CartRepository from "./cartRepository.js";
-import { CarDao } from "../../Persistence/DAO.js";
+import { CarDao } from "../../persistence/DAO.js";
 import Cart from "./cart.js";
 import createID from "../../resources/createID.js";
 

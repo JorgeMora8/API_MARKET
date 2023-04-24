@@ -1,5 +1,5 @@
 import OrderRepository from "./orderRepository.js"
-import { OrderDao } from "../../Persistence/DAO.js"
+import { OrderDao } from "../../persistence/DAO.js"
 import {cartService} from "../cart/cartService.js"
 import createID from "../../resources/createID.js"
 import Order from "./order.js"

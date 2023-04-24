@@ -1,6 +1,6 @@
 
 import Product from "./product.js"
-import { ProductDao } from "../../Persistence/DAO.js"
+import { ProductDao } from "../../persistence/DAO.js"
 import StoreRepository from "./productRepository.js"
 import {productValidation} from "./productValidation.js"
 
