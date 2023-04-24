@@ -1,7 +1,7 @@
 import createUser from "../../utils/createUser.js"
 import createToken from "../../Auth/token.js"
 import UserRepository from "./userRepository.js"
-import { UserDao } from "../../Persistence/DAO.js"
+import { UserDao } from "../../persistence/DAO.js"
 import { cartService } from "../cart/cartService.js"
 import {userValidations} from "./userValidation.js"
 
