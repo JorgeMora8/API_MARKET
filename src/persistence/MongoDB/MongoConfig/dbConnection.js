@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import {SERVER_DB} from "../../../config/Params.js"
-import { DB_CLOUD_DEVELOP, DB_LOCAL_DEVELOP } from "../../../config/Env.js";
+import {SERVER_DB} from "../../../config/params.js"
+import { DB_CLOUD_DEVELOP, DB_LOCAL_DEVELOP } from "../../../config/env.js";
 
 mongoose.set("strictQuery", false)
 
