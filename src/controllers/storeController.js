@@ -5,6 +5,7 @@ import {updateProductValidation} from "../resources/ensureCorrectData.js"
 export async function getProducts(req, res){ 
     try{
         const products = await Store.getAllProducts()
+        // res.setHeader("X-Content-Type-Options", "nosniff")
         res.render("index", {products:products})
     }   catch(err){ 
         res.render("errorPage", {message:err.message})

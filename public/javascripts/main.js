@@ -2,6 +2,7 @@
 
 import { SERVER_PORT } from "../../src/config/params.js";
 
+
 // const message = {"id":"cartid"}
 // cartIcon.addEventListener("click", (e)=> { 
 //     fetch("http://localhost:8080/api/products", {
@@ -22,11 +23,11 @@ import { SERVER_PORT } from "../../src/config/params.js";
 function addProductInCart(productId){ 
 
     const data = {"productId":productId}; 
-    fetch(`http://localhost:${SERVER_PORT}/api/cart/${productId}`, {
+    fetch(`http://localhost:10000/api/cart/${productId}`, {
         method: 'POST',
         // body: JSON.stringify(data),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json', 
         }
       })
       Swal.fire({

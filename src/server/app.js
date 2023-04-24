@@ -9,6 +9,7 @@ import { CarRouter } from "../routers/cart.js"
 import { Homepage } from "../controllers/homepage.js"
 import {pageNotFoundGET } from "../controllers/pageNotFound.js"
 import cookieParser from "cookie-parser"
+// import cors from "cors"
 
 
 export const app = express()
@@ -18,6 +19,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use(express.static("./public"))
 app.use(cookieParser())
+// app.use(cors)
 
 app.set("view engine", "ejs")
 app.set("views", "./views")
