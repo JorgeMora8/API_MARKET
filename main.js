@@ -1,7 +1,6 @@
 import InitializeServer from "./src/server/server.js"
-import { PORT } from "./src/config/Params.js"
-import { DB_CLOUD_DEVELOP } from "./src/config/env.js"
+import { SERVER_PORT } from "./src/config/Params.js"
 
 
 
-await InitializeServer(PORT)
+await InitializeServer(SERVER_PORT)
