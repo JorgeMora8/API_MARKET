@@ -1,5 +1,7 @@
 // const cartIcon = document.getElementById("cartIcon")
 
+import { SERVER_PORT } from "../../src/config/params.js";
+
 // const message = {"id":"cartid"}
 // cartIcon.addEventListener("click", (e)=> { 
 //     fetch("http://localhost:8080/api/products", {
@@ -20,7 +22,7 @@
 function addProductInCart(productId){ 
 
     const data = {"productId":productId}; 
-    fetch(`http://localhost:8080/api/cart/${productId}`, {
+    fetch(`http://localhost:${SERVER_PORT}/api/cart/${productId}`, {
         method: 'POST',
         // body: JSON.stringify(data),
         headers: {
