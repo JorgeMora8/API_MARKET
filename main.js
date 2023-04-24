@@ -1,5 +1,5 @@
 import InitializeServer from "./src/server/server.js"
-import { SERVER_PORT } from "./src/config/Params.js"
+import { SERVER_PORT } from "./src/config/params.js"
 
 
 
