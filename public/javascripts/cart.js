@@ -1,5 +1,3 @@
-import { SERVER_PORT } from "../../src/config/params.js";
-
 function deleteProductInCart(id){ 
     fetch(`http://localhost:10000/api/cart/${id}`, {
         method: 'DELETE',

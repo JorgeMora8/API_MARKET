@@ -1,7 +1,5 @@
 // const cartIcon = document.getElementById("cartIcon")
 
-import { SERVER_PORT } from "../../src/config/params.js";
-
 
 // const message = {"id":"cartid"}
 // cartIcon.addEventListener("click", (e)=> { 
