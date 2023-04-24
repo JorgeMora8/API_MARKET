@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use(express.static("./public"))
 app.use(cookieParser())
-app.use(cors)
+app.use(cors())
 
 app.set("view engine", "ejs")
 app.set("views", "./views")

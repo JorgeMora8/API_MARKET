@@ -1,3 +1,5 @@
+
+
 function deleteProductInCart(id){ 
     fetch(`http://localhost:10000/api/cart/${id}`, {
         method: 'DELETE',
